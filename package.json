@@ -1,0 +1,22 @@
+{
+  "name": "npm-check-installed-git-tags",
+  "version": "0.0.1",
+  "description": "Verify that version tagged git packages are actually installed correctly.",
+  "main": "src/index.js",
+  "repository": {
+    "url": "https://github.com/jwplayer/npm-check-installed-git-tags"
+  },
+  "bin": {
+    "npm-check-installed-git-tags-and-fix": "./src/fix.js",
+    "npm-check-installed-git-tags": "./src/check.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Brandon Casey <brandonocasey@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "npm-package-arg": "^11.0.1"
+  }
+}
