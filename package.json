@@ -1,6 +1,6 @@
 {
   "name": "npm-check-installed-git-tags",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Verify that version tagged git packages are actually installed correctly.",
   "main": "src/index.js",
   "repository": {
