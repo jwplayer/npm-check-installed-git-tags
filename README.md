@@ -2,10 +2,10 @@
 Verify the package.json version of git dependencies matches what gets installed.
 
 ## Automated Usage
-Add `npm-check-installed-git-tags` as a `postinstall` script to your package.json:
+Add `npm-check-installed-git-tags` as a `prepare` script to your package.json:
 ```json
 "script": {
-  "postinstall": "npm-check-installed-git-tags"
+  "prepare": "npm-check-installed-git-tags"
 }
 ```
 
@@ -15,7 +15,7 @@ This will make your installation fail if you use git dependencies and the tag sp
 After running `npm install` you can run `npm-check-installed-git-tags` to see if packages that are installed are incorrect. If they are you will be prompted to run `npm-check-installed-git-tags-and-fix` to fix the issues in a minimal way (see #2 in the Why is this needed section).
 
 ## Disable
-Remove the `postinstall` script or set `DO_NOT_RUN_NPM_CHECK_INSTALLED_GIT_TAGS=1` as an environment variable
+Remove the `prepare` script or set `DO_NOT_RUN_NPM_CHECK_INSTALLED_GIT_TAGS=1` as an environment variable
 
 
 ## Why is this needed
