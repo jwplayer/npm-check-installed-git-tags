@@ -14,7 +14,7 @@ const getPackageErrors = function(cwd) {
     // if it isn't a git dependency or it is versioned using the main branch
     // then it cannot be wrong
     if (result.type !== 'git' || !result.gitCommittish) {
-      continue
+      continue;
     }
 
     const installPath = require.resolve(`${pkgName}/package.json`, {paths: [cwd]});
@@ -35,7 +35,7 @@ const getPackageErrors = function(cwd) {
 
     // if versions match than it is the correct git version
     if (installedVersion === expectedVersion) {
-      continue
+      continue;
     }
 
     packagesWithErrors.push({pkgName, installedVersion, expectedVersion, saveSpec: result.saveSpec})
